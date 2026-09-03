@@ -1,0 +1,10 @@
+Script started on 2026-09-03 11:50:00-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="117" LINES="8"]
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ ./ma[K[K[K[Kmake all
+[?2004lgcc main.c -o escalonamento
+./escalonamento
+Inicial[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make clean
+[?2004lrm -f escalonamento
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ x[Kexit
+[?2004lexit
+
+Script done on 2026-09-03 11:50:23-03:00 [COMMAND_EXIT_CODE="0"]
