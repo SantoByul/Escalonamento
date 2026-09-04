@@ -1,8 +1,12 @@
 
+REMOVE = rate_dsob.out scheduler edf_dsob.out
 
 all:
-	gcc main.c -o escalonamento
-	./escalonamento
+	gcc main.c -o scheduler
+	./scheduler rate voo.txt
+
+compile:
+	gcc main.c -o scheduler
 
 clean:
-	rm -f escalonamento
+	rm -f $(REMOVE)

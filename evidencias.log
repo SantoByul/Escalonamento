@@ -8,3 +8,22 @@ Inicial[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m
 [?2004lexit
 
 Script done on 2026-09-03 11:50:23-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-04 10:57:14-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="159" LINES="8"]
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ pwd; whoami; date
+[?2004l/home/danie/Escalonamento
+danie
+Fri Sep  4 10:57:18 -03 2026
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make compile
+[?2004lgcc main.c -o scheduler
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ ./c[Kscheduler rate voo.txt
+[?2004lFuncional Rate
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ ./ch[K[Kschedu[Kuler edf voo.txt
+[?2004lFuncional EDF
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make cea[K[Klean
+[?2004lrm -f rate_dsob.out scheduler 
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make clean
+[?2004lrm -f rate_dsob.out scheduler edf_dsob.out
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-04 11:00:05-03:00 [COMMAND_EXIT_CODE="0"]
