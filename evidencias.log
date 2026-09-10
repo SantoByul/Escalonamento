@@ -131,3 +131,63 @@ Funcional Rate
 [?2004lexit
 
 Script done on 2026-09-10 09:47:47-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-10 15:03:32-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="159" LINES="8"]
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ whoami; pwd; date
+[?2004ldanie
+/home/danie/Escalonamento
+Thu Sep 10 15:03:40 -03 2026
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+[01m[Kmain.c:[m[K In function ‘[01m[Kconverter_val[m[K’:
+[01m[Kmain.c:26:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint *[m[K’, but argument 3 has type ‘[01m[Kint **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   26 |     if(fscanf(file, "[01;35m[K%d[m[K", [32m[K&total[m[K) != 1){
+      |                      [01;35m[K~^[m[K   [32m[K~~~~~~[m[K
+      |                       [01;35m[K|[m[K   [32m[K|[m[K
+      |                       [01;35m[K|[m[K   [32m[Kint **[m[K
+      |                       [01;35m[Kint *[m[K
+./scheduler rate voo.txt
+make: *** [Makefile:6: all] Segmentation fault (core dumped)
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make [K[K[K[K[Kmake all
+[?2004lgcc main.c -o scheduler
+./scheduler rate voo.txt
+./scheduler edf voo.txt
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ m[Kmake l[Kclean
+[?2004lrm -f rate_dsob.out scheduler edf_dsob.out
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+./scheduler rate voo.txt
+./scheduler edf voo.txt
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+./scheduler rate voo.txt
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+./scheduler edf voo.txt
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+./scheduler rate voo.txt
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+./scheduler edf voo.txt
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+./scheduler rate voo.txt
+./scheduler edf voo.txt
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+./scheduler rate voo.txt
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+./scheduler edf voo.txt
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make clean
+[?2004lrm -f rate_dsob.out scheduler edf_dsob.out
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-10 15:07:02-03:00 [COMMAND_EXIT_CODE="0"]
