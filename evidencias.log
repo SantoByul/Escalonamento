@@ -27,3 +27,107 @@ Fri Sep  4 10:57:18 -03 2026
 [?2004lexit
 
 Script done on 2026-09-04 11:00:05-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-10 09:28:30-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="159" LINES="8"]
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ pwd whoami[K[K[K[K[K[K[K; whoami.[K; date
+[?2004l/home/danie/Escalonamento
+danie
+Thu Sep 10 09:29:06 -03 2026
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+[01m[Kmain.c:[m[K In function ‘[01m[Kconverter_val[m[K’:
+[01m[Kmain.c:26:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint *[m[K’, but argument 3 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   26 |     if(fscanf(file, "[01;35m[K%d[m[K", [32m[Kt->tempo[m[K) != 1){
+      |                      [01;35m[K~^[m[K   [32m[K~~~~~~~~[m[K
+      |                       [01;35m[K|[m[K    [32m[K|[m[K
+      |                       [01;35m[K|[m[K    [32m[Kint[m[K
+      |                       [01;35m[Kint *[m[K
+[01m[Kmain.c:30:27:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects a matching ‘[01m[Kint[m[K’ argument [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   30 |     printf("Tempo total: [01;35m[K%d[m[K\n")
+      |                          [01;35m[K~^[m[K
+      |                           [01;35m[K|[m[K
+      |                           [01;35m[Kint[m[K
+[01m[Kmain.c:30:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kwhile[m[K’
+   30 |     printf("Tempo total: %d\n")
+      |                                [01;31m[K^[m[K
+      |                                [32m[K;[m[K
+   31 | 
+   32 |     [32m[Kwhile[m[K(fscanf(file, "%s %d %d %d", t->nome, t->periodo, t-deadline, t->burst) == 4){
+      |     [32m[K~~~~~[m[K                       
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:51:25:[m[K [01;31m[Kerror: [m[Kincompatible type for argument 2 of ‘[01m[Kconverter_val[m[K’
+   51 |     converter_val(file, [01;31m[Kt[m[K);
+      |                         [01;31m[K^[m[K
+      |                         [01;31m[K|[m[K
+      |                         [01;31m[KEscala[m[K
+[01m[Kmain.c:25:40:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[KEscala *[m[K’ but argument is of type ‘[01m[KEscala[m[K’
+   25 | void converter_val(FILE *file, [01;36m[KEscala *t[m[K){
+      |                                [01;36m[K~~~~~~~~^[m[K
+make: *** [Makefile:5: all] Error 1
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+[01m[Kmain.c:[m[K In function ‘[01m[Kconverter_val[m[K’:
+[01m[Kmain.c:26:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint *[m[K’, but argument 3 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   26 |     if(fscanf(file, "[01;35m[K%d[m[K", [32m[Kt->tempo[m[K) != 1){
+      |                      [01;35m[K~^[m[K   [32m[K~~~~~~~~[m[K
+      |                       [01;35m[K|[m[K    [32m[K|[m[K
+      |                       [01;35m[K|[m[K    [32m[Kint[m[K
+      |                       [01;35m[Kint *[m[K
+[01m[Kmain.c:32:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kdeadline[m[K’ undeclared (first use in this function)
+   32 |     while(fscanf(file, "%s %d %d %d", t->nome, t->periodo, t-[01;31m[Kdeadline[m[K, t->burst) == 4){
+      |                                                              [01;31m[K^~~~~~~~[m[K
+[01m[Kmain.c:32:62:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:51:25:[m[K [01;31m[Kerror: [m[Kincompatible type for argument 2 of ‘[01m[Kconverter_val[m[K’
+   51 |     converter_val(file, [01;31m[Kt[m[K);
+      |                         [01;31m[K^[m[K
+      |                         [01;31m[K|[m[K
+      |                         [01;31m[KEscala[m[K
+[01m[Kmain.c:25:40:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[KEscala *[m[K’ but argument is of type ‘[01m[KEscala[m[K’
+   25 | void converter_val(FILE *file, [01;36m[KEscala *t[m[K){
+      |                                [01;36m[K~~~~~~~~^[m[K
+make: *** [Makefile:5: all] Error 1
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+[01m[Kmain.c:[m[K In function ‘[01m[Kconverter_val[m[K’:
+[01m[Kmain.c:30:27:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 2 has type ‘[01m[Kint *[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   30 |     printf("Tempo total: [01;35m[K%d[m[K\n", [32m[K&t->tempo[m[K);
+      |                          [01;35m[K~^[m[K     [32m[K~~~~~~~~~[m[K
+      |                           [01;35m[K|[m[K     [32m[K|[m[K
+      |                           [01;35m[Kint[m[K   [32m[Kint *[m[K
+      |                          [32m[K%ls[m[K
+./scheduler rate voo.txt
+Tempo total: -563309296
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+Funcional Rate
+./scheduler edf voo.txt
+Tempo total: 1935655680
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+Funcional EDF
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ ./scheduler edf voo.txt
+[?2004lTempo total: 151403968
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+Funcional EDF
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ ./schedule [Kr rate voo.txt
+[?2004lTempo total: -190624464
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+Funcional Rate
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ ./scheduler rate voo.txt
+[?2004lTempo total: 768537440
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+Funcional Rate
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004lTempo total: 637646672
+ATT 20 12 8 são os especificos dessa atividade atual
+NAV 50 30 15 são os especificos dessa atividade atual
+Funcional Rate
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-10 09:47:47-03:00 [COMMAND_EXIT_CODE="0"]
