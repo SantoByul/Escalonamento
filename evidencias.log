@@ -216,3 +216,26 @@ Thu Sep 10 20:01:02 -03 2026
 [?2004lexit
 
 Script done on 2026-09-10 20:38:28-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-10 23:09:03-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="141" LINES="8"]
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ whoami; pwd; date
+[?2004ldanie
+/home/danie/Escalonamento
+Thu Sep 10 23:09:08 -03 2026
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ e[Kmake all
+[?2004lgcc main.c -o scheduler
+[01m[Kmain.c:[m[K In function ‘[01m[Kescala_edf[m[K’:
+[01m[Kmain.c:35:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kqnt_tarefasL[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kqnt_tarefas[m[K’?
+   35 |     for(int i = 0; i < [01;31m[Kqnt_tarefasL[m[K; i++){
+      |                        [01;31m[K^~~~~~~~~~~~[m[K
+      |                        [32m[Kqnt_tarefas[m[K
+[01m[Kmain.c:35:24:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+make: *** [Makefile:5: all] Error 1
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make all
+[?2004lgcc main.c -o scheduler
+./scheduler edf voo.txt
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make clean
+[?2004lrm -f rate_dsob.out scheduler edf_dsob.out
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ clea[K[K[K[Kexit
+[?2004lexit
+
+Script done on 2026-09-10 23:11:46-03:00 [COMMAND_EXIT_CODE="0"]

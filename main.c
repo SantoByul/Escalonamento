@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define TOTAL 3
+#define TOTAL 4
 
 typedef struct{
     char nome[12];
@@ -15,6 +15,7 @@ typedef struct{
 }Escala;
 
 int tempo;
+int qnt_tarefas;
 
 void escala_edf(Escala *t){
     FILE *file = fopen("edf_dsob.out", "w");
@@ -23,7 +24,7 @@ void escala_edf(Escala *t){
         return;
     }
 
-    for(int i = 0; i < TOTAL; i++){
+    for(int i = 0; i < qnt_tarefas; i++){
         t[i].complete = 0;
         t[i].lost = 0;
         t[i].killed = 0;
@@ -31,7 +32,7 @@ void escala_edf(Escala *t){
 
     int restante[TOTAL];
     int prazo[TOTAL];
-    for(int i = 0; i < TOTAL; i++){
+    for(int i = 0; i < qnt_tarefas; i++){
         restante[i] = 0;
         prazo[i] = 0;
     }
@@ -39,7 +40,7 @@ void escala_edf(Escala *t){
     int inicio = 0;
 
     for(int i = 0; i < tempo; i++){
-        for(int j = 0; j < TOTAL; j++){
+        for(int j = 0; j < qnt_tarefas; j++){
             if(i % t[j].periodo == 0){
                 if(restante[j] > 0){
                     t[j].lost++;
@@ -49,7 +50,7 @@ void escala_edf(Escala *t){
             }
         }
 
-        for(int z = 0; z < TOTAL; z++){
+        for(int z = 0; z < qnt_tarefas; z++){
             if(restante[z] > 0 && i>= prazo[z]){
                 t[z].lost++;
                 restante[z] = 0;
@@ -62,7 +63,7 @@ void escala_edf(Escala *t){
         }
 
         int proximo = -1;
-        for(int z = 0; z < TOTAL; z++){
+        for(int z = 0; z < qnt_tarefas; z++){
             if(restante[z] > 0){
                 if(proximo == -1 || prazo[z] < prazo[proximo]){
                     proximo = z;
@@ -121,8 +122,22 @@ Escala *converter_val(FILE *file){
         fprintf(stderr,"Erro na Alocação de Memoria");
         return NULL;
     }
-    int i=0;
-    while(fscanf(file, "%s %d %d %d", t[i].nome, &t[i].periodo, &t[i].deadline, &t[i].burst) == 4) i++;
+
+    qnt_tarefas = 0;
+    while(qnt_tarefas < TOTAL && fscanf(file, "%s %d %d %d", t[qnt_tarefas].nome, &t[qnt_tarefas].periodo, &t[qnt_tarefas].deadline, &t[qnt_tarefas].burst) == 4){
+        if(t[qnt_tarefas].periodo <= 0){
+            fprintf(stderr,"Periodo invalido para a tarefa %s\n", t[qnt_tarefas].nome);
+            free(t);
+            return NULL;
+        }
+        qnt_tarefas++;
+    }
+
+    if(qnt_tarefas == 0){
+        fprintf(stderr,"Nenhuma tarefa valida encontrada\n");
+        free(t);
+        return NULL;
+    }
 
     return t;
 }
