@@ -265,3 +265,17 @@ Fri Sep 11 08:45:43 -03 2026
 [?2004lexit
 
 Script done on 2026-09-11 08:46:07-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-11 09:01:59-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="159" LINES="5"]
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ pwd;ah[Kw[K[Kwhoami;date
+[?2004l/home/danie/Escalonamento
+danie
+Fri Sep 11 09:02:09 -03 2026
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make compile
+[?2004lgcc main.c -o scheduler
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ .scheduler[K[K[K[K[K[K[K[K[K[K./s[K[K[K/.[K[K./scheduler rate voo.txt
+[?2004l[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ make clean
+[?2004lrm -f rate_dsob.out scheduler edf_dsob.out
+[?2004h]0;danie@SantoByul: ~/Escalonamento[01;32mdanie@SantoByul[00m:[01;34m~/Escalonamento[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-11 09:03:03-03:00 [COMMAND_EXIT_CODE="0"]
